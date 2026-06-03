@@ -1,9 +1,13 @@
 function makeArray(firstArray, secondArray, maxLength) {
   let commonArray = firstArray.concat(secondArray);
-  let newArray = [];
-  for (let i = 0; i < maxLength; i++) {
-    newArray.push(commonArray[i]);
-  }
+  //let newArray = [];
+  /*if (commonArray.length <= maxLength) {
+    newArray = commonArray;
+  } else
+    for (let i = 0; i < maxLength; i++) {
+      newArray.push(commonArray[i]);
+    }*/
+  const newArray = commonArray.slice(0, maxLength);
 
   return newArray;
 }
